@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloonpedia | Balloon Hunter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pedia-img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 1rem; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.3)); }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 1rem 0; font-size: 0.9rem; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; text-align: left;}
+        .stats-grid div { display: flex; flex-direction: column; }
+        .stats-grid strong { color: var(--color-sky-light); }
+        .lore-text { font-style: italic; font-size: 0.9rem; color: #ccc; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;}
+    </style>
+</head>
+<body>
+    <div class="clouds-bg"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Logo"> Balloon Hunter
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="balloonpedia.html" class="active">Balloonpedia</a></li>
+                <li><a href="updates.html">Actualizaciones</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="news.html">Dev Blog</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="community.html">Comunidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Balloonpedia</h1>
+            <p>La enciclopedia oficial. Conoce todas las mecánicas, globos, obstáculos y secretos del juego.</p>
+        </div>
+    </header>
+
+    <main class="container section" style="padding-top: 0;">
+        <div class="grid-3">
+            
+            <!-- Rojo -->
+            <div class="glass-card expandable-card">
+                <img src="assets/images/balloon_red.png" alt="Globo Rojo" class="pedia-img floating">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Globo Rojo</h3>
+                    <span class="badge common">COMÚN</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> Puntos base</div>
+                    <div><strong>Puntos:</strong> +20</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>El clásico globo carmesí. Es ligeramente más rápido que el promedio, por lo que requiere reflejos rápidos.</p>
+                <div class="lore-text">"El favorito de los principiantes. Su color brillante lo hace un objetivo fácil de identificar."</div>
+            </div>
+
+            <!-- Verde -->
+            <div class="glass-card expandable-card">
+                <img src="assets/images/balloon_green.png" alt="Globo Verde" class="pedia-img floating" style="animation-delay: 0.5s;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Globo Verde</h3>
+                    <span class="badge common">COMÚN</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> Puntos altos</div>
+                    <div><strong>Puntos:</strong> +30</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>Un globo escurridizo que recompensa la precisión con una alta puntuación. Priorízalos para escalar en el ranking.</p>
+                <div class="lore-text">"Se camufla bien en ciertos entornos. Requiere una mirada atenta."</div>
+            </div>
+
+            <!-- Amarillo -->
+            <div class="glass-card expandable-card">
+                <img src="assets/images/balloon_yellow.png" alt="Globo Amarillo" class="pedia-img floating" style="animation-delay: 1s;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Globo Amarillo</h3>
+                    <span class="badge common">COMÚN</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> Puntos base</div>
+                    <div><strong>Puntos:</strong> +10</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>El globo más básico y lento. Excelente para mantener vivo tu multiplicador de combo sin arriesgarte demasiado.</p>
+                <div class="lore-text">"Flota perezosamente. Es el sustento diario de cualquier cazador de globos."</div>
+            </div>
+
+            <!-- Azul -->
+            <div class="glass-card expandable-card">
+                <img src="assets/images/balloon_blue.png" alt="Globo de Hielo" class="pedia-img floating" style="animation-delay: 0.2s;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Globo de Hielo</h3>
+                    <span class="badge special">ESPECIAL</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> Congelación (-50% vel)</div>
+                    <div><strong>Puntos:</strong> +50</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>Desata una ola de escarcha al explotar, ralentizando dramáticamente a todos los globos en pantalla durante varios segundos.</p>
+                <div class="lore-text">"Su interior contiene aire comprimido a temperaturas bajo cero. ¡Úsalo estratégicamente!"</div>
+            </div>
+
+            <!-- Negro -->
+            <div class="glass-card expandable-card">
+                <img src="assets/images/balloon_black.png" alt="Globo Explosivo" class="pedia-img floating" style="animation-delay: 0.8s;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Globo Explosivo</h3>
+                    <span class="badge legendary">LEGENDARIO</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> Explosión en área</div>
+                    <div><strong>Puntos:</strong> +100 + Área</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>Altamente volátil. Al reventar, crea una gigantesca explosión que destruye y otorga los puntos de todos los globos cercanos. No afecta al Ave.</p>
+                <div class="lore-text">"Prohibido en varios torneos de cazadores. Su poder destructivo es inigualable."</div>
+            </div>
+
+            <!-- Pájaro -->
+            <div class="glass-card expandable-card bird-character">
+                <img src="assets/images/bird_cartoon.png" alt="Ave Rosada" class="pedia-img floating" style="animation-delay: 1.5s;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Ave Rosada</h3>
+                    <span class="badge legendary" style="background: var(--color-balloon-red);">OBSTÁCULO</span>
+                </div>
+                <div class="stats-grid">
+                    <div><strong>Efecto:</strong> GAME OVER</div>
+                    <div><strong>Puntos:</strong> N/A</div>
+                    <div><strong>Versión:</strong> 1.0</div>
+                    <div><strong>Estado:</strong> <span style="color: var(--color-status-done);">Disponible</span></div>
+                </div>
+                <p>Nuestra protegida. Las aves cruzan el cielo pacíficamente. Si golpeas una por error, tu partida termina inmediatamente.</p>
+                <div class="lore-text">"La naturaleza debe ser respetada. Un verdadero cazador sabe cuándo NO disparar."</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

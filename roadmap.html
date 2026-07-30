@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap | Balloon Hunter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .roadmap-container { position: relative; max-width: 800px; margin: 0 auto; padding: 40px 0; }
+        .roadmap-container::after { content: ''; position: absolute; width: 4px; background: rgba(255,255,255,0.1); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; background-color: var(--color-sky-dark); border: 4px solid var(--color-sky-light); border-radius: 50%; top: 20px; z-index: 1; }
+        .timeline-item.left::after { right: -12px; }
+        .timeline-item.right::after { left: -12px; }
+        .timeline-content { padding: 20px; background: var(--color-card-bg); border-radius: var(--radius-md); border: 1px solid var(--color-card-border); backdrop-filter: blur(10px); }
+        .timeline-item.done::after { background-color: var(--color-status-done); border-color: white;}
+        .timeline-item.wip::after { background-color: var(--color-status-wip); border-color: white;}
+        .timeline-item.future::after { background-color: #555; border-color: #333;}
+        @media screen and (max-width: 600px) {
+            .roadmap-container::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
+            .timeline-item.left::after, .timeline-item.right::after { left: 21px; }
+            .timeline-item.right { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="clouds-bg"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Logo"> Balloon Hunter
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="balloonpedia.html">Balloonpedia</a></li>
+                <li><a href="updates.html">Actualizaciones</a></li>
+                <li><a href="roadmap.html" class="active">Roadmap</a></li>
+                <li><a href="news.html">Dev Blog</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="community.html">Comunidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Roadmap Oficial</h1>
+            <p>El camino trazado para el futuro de Balloon Hunter. Acompáñanos en este viaje.</p>
+        </div>
+    </header>
+
+    <main class="container section" style="padding-top: 0;">
+        <div class="roadmap-container">
+            
+            <div class="timeline-item left done">
+                <div class="timeline-content">
+                    <h2>Versión 1.0 ✅</h2>
+                    <p>Lanzamiento Oficial. Mecánicas base, 5 tipos de globos y penalización del ave. Optimización de motor y audio.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right wip">
+                <div class="timeline-content">
+                    <h2>Versión 1.1 🟡</h2>
+                    <p>Clima dinámico. Tablas de clasificación online (Google Play Games / Game Center). Modo Oscuro.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left wip">
+                <div class="timeline-content">
+                    <h2>Versión 1.2 🟡</h2>
+                    <p>Nuevos Power-Ups. Sistema de Misiones Diarias y logros.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right future">
+                <div class="timeline-content">
+                    <h2>Versión 2.0 🔵</h2>
+                    <p>Gran Expansión. Nuevos escenarios, multijugador asíncrono y cosméticos para el cazador.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left future">
+                <div class="timeline-content">
+                    <h2>??? 🔒</h2>
+                    <p>Expediente clasificado. Faltan datos para revelar este hito.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

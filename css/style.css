@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Balloon Hunter Hub - Design System & Global Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --color-sky-light: #6ebcf0;
+    --color-sky-mid: #4fa9e8;
+    --color-sky-dark: #2980b9;
+    --color-text-main: #ffffff;
+    --color-text-muted: #e0f2fe;
+    --color-card-bg: rgba(255, 255, 255, 0.15);
+    --color-card-border: rgba(255, 255, 255, 0.2);
+    
+    /* Semantic Colors */
+    --color-balloon-red: #ff4757;
+    --color-balloon-green: #2ed573;
+    --color-balloon-yellow: #ffa502;
+    --color-balloon-blue: #70a1ff;
+    --color-balloon-black: #2f3542;
+    --color-bird-pink: #ff7f50;
+
+    /* Status Colors */
+    --color-status-done: #2ed573;
+    --color-status-wip: #ffa502;
+    --color-status-future: #3742fa;
+
+    /* Typography */
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+
+    /* Effects */
+    --shadow-soft: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, var(--color-sky-dark) 0%, var(--color-sky-mid) 100%);
+    background-attachment: fixed;
+    color: var(--color-text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(41, 128, 185, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--color-card-border);
+    padding: var(--space-md) 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-brand img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--color-text-main);
+    transition: var(--transition-smooth);
+    border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Components (Cards, Buttons, Badges)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    background: var(--color-balloon-red);
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    transition: var(--transition-smooth);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.2);
+    box-shadow: none;
+}
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.glass-card {
+    background: var(--color-card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge.common { background: rgba(255, 255, 255, 0.2); }
+.badge.special { background: var(--color-balloon-blue); }
+.badge.legendary { background: var(--color-balloon-black); }
+.badge.available { border: 1px solid var(--color-status-done); color: var(--color-status-done); }
+.badge.wip { border: 1px solid var(--color-status-wip); color: var(--color-status-wip); }
+
+/* ==========================================================================
+   Animations & Backgrounds
+   ========================================================================== */
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.clouds-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('../assets/images/clouds.png') repeat-x center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1;
+    animation: moveClouds 120s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes moveClouds {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Layout Grids
+   ========================================================================== */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg); }
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+.page-header {
+    text-align: center;
+    padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-xl);
+    border-top: 1px solid var(--color-card-border);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(41, 128, 185, 0.95);
+        padding: var(--space-md);
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}

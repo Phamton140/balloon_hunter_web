@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizaciones | Balloon Hunter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .updates-section { margin-bottom: var(--space-xl); }
+        .updates-section h2 { border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;}
+        
+        /* Mystery Card Styles */
+        .mystery-card { position: relative; overflow: hidden; cursor: crosshair; }
+        .mystery-card img { filter: brightness(0) blur(4px); opacity: 0.7; transition: filter 0.5s;}
+        .mystery-card:hover img { filter: brightness(0.2) blur(2px); }
+        .mystery-card::after { content: '?'; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; color: rgba(255,255,255,0.3); font-weight: bold; pointer-events: none;}
+    </style>
+</head>
+<body>
+    <div class="clouds-bg"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Logo"> Balloon Hunter
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="balloonpedia.html">Balloonpedia</a></li>
+                <li><a href="updates.html" class="active">Actualizaciones</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="news.html">Dev Blog</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="community.html">Comunidad</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Actualizaciones</h1>
+            <p>Descubre qué hay de nuevo, qué está a punto de llegar y qué secretos esconde el futuro de Balloon Hunter.</p>
+        </div>
+    </header>
+
+    <main class="container section" style="padding-top: 0;">
+        
+        <div class="updates-section">
+            <h2>✅ Disponible Ahora</h2>
+            <div class="grid-3">
+                <div class="glass-card">
+                    <span class="badge available">ACTIVO</span>
+                    <h3 style="margin: 10px 0;">Modo Clásico y 5 Globos</h3>
+                    <p>La experiencia base ya está disponible para todos los jugadores. Explora la Balloonpedia para conocer todos los detalles.</p>
+                </div>
+                <div class="glass-card">
+                    <span class="badge available">ACTIVO</span>
+                    <h3 style="margin: 10px 0;">Sistema de Ranking Local</h3>
+                    <p>Compite contra ti mismo. Guarda tus 3 mejores puntuaciones y rompe tus propios récords mundiales.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="updates-section">
+            <h2>🧪 Próxima Actualización</h2>
+            <p style="margin-bottom: 20px; color: var(--color-text-muted);">Características en fase final de desarrollo. Llegarán muy pronto.</p>
+            <div class="grid-3">
+                <div class="glass-card" style="border-color: var(--color-status-wip);">
+                    <span class="badge wip">PRÓXIMAMENTE</span>
+                    <h3 style="margin: 10px 0;">Modo Noche / Tormenta</h3>
+                    <p>El clima está cambiando. Nuevos fondos, música dinámica y visibilidad reducida para poner a prueba a los veteranos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="updates-section">
+            <h2>🔮 Futuro</h2>
+            <p style="margin-bottom: 20px; color: var(--color-text-muted);">Los informes del laboratorio indican actividad inusual...</p>
+            <div class="grid-3">
+                
+                <div class="glass-card mystery-card">
+                    <img src="assets/images/balloon_red.png" alt="???">
+                    <h3 style="margin: 10px 0;">Expediente #042</h3>
+                    <p>"Nuestros radares han detectado una nueva especie voladora que parece estar acorazada. ¿Qué crees que hace?"</p>
+                </div>
+
+                <div class="glass-card mystery-card">
+                    <img src="assets/images/bird_cartoon.png" alt="???">
+                    <h3 style="margin: 10px 0;">Alerta de Clima</h3>
+                    <p>"Algo extraño fue encontrado flotando sobre las nubes más densas. Los globos actúan de forma errática a su alrededor."</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

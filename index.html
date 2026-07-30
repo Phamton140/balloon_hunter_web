@@ -3,92 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balloon Hunter | Official Game & Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Balloon Hunter | Centro Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="sky-background"></div>
-        <div class="container hero-content">
-            <img src="logo.png" alt="Balloon Hunter Logo" class="logo">
-            <h1>Balloon Hunter</h1>
-            <p class="tagline">¡Explota globos, rompe récords y salva a las aves en una aventura por los cielos!</p>
-            <a href="#privacy" class="btn">Política de Privacidad</a>
+    <div class="clouds-bg"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Logo"> Balloon Hunter
+            </a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="balloonpedia.html">Balloonpedia</a></li>
+                <li><a href="updates.html">Actualizaciones</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="news.html">Dev Blog</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="community.html">Comunidad</a></li>
+            </ul>
         </div>
-        <div class="clouds"></div>
+    </nav>
+
+    <header class="page-header hero" style="min-height: 80vh;">
+        <div class="container">
+            <img src="logo.png" alt="Balloon Hunter" class="logo floating" style="margin: 0 auto; width: 200px;">
+            <h1 style="font-size: 4rem; margin-top: 1rem;">Balloon Hunter</h1>
+            <p class="tagline">¡El centro oficial de la comunidad! Descubre todos los secretos, sigue el desarrollo y prepárate para cazar.</p>
+            <br>
+            <a href="https://play.google.com/store" class="btn" style="margin-right: 15px;">Descargar el Juego</a>
+            <a href="balloonpedia.html" class="btn btn-secondary">Explorar Balloonpedia</a>
+        </div>
     </header>
 
-    <main class="container">
-        <section id="about" class="section">
-            <h2>Sobre el Juego</h2>
-            <p>Balloon Hunter es un emocionante juego casual donde tu objetivo es reventar la mayor cantidad de globos antes de que se agote el tiempo. Pon a prueba tus reflejos, crea combos impresionantes y ten mucho cuidado con los obstáculos. ¡Un juego perfecto para todas las edades con un mensaje importante!</p>
-        </section>
-
-        <section id="lore" class="section">
-            <h2>Personajes y Elementos</h2>
-            <div class="cards-grid">
-                
-                <div class="card basic-balloons">
-                    <div class="card-icon">🎈</div>
-                    <h3>Globos Clásicos</h3>
-                    <p>Los globos <strong>Rojo, Amarillo y Verde</strong> son la base de tu puntuación. Explótalos rápidamente para aumentar tu combo y conseguir un mejor récord.</p>
-                </div>
-
-                <div class="card ice-balloon">
-                    <div class="card-icon">❄️</div>
-                    <h3>Globo de Hielo</h3>
-                    <p>Este globo azul místico aparece rara vez. Al reventarlo, desatarás un efecto de congelación que ralentiza el tiempo, permitiéndote cazar globos con mayor precisión.</p>
-                </div>
-
-                <div class="card bomb-balloon">
-                    <div class="card-icon">💣</div>
-                    <h3>Globo Explosivo</h3>
-                    <p>El globo negro y peligroso. Al tocarlo, crea una explosión masiva que destruye a todos los globos cercanos. ¡Úsalo estratégicamente para limpiar la pantalla y sumar puntos extra!</p>
-                </div>
-
-                <div class="card bird-character">
-                    <div class="card-icon">🐦</div>
-                    <h3>El Ave (Protección Ambiental)</h3>
-                    <p>El cielo es el hogar natural de las aves. En Balloon Hunter, si golpeas a nuestra amiga ave rosa por error, <strong>pierdes la partida al instante</strong>. Queremos enseñar a los jugadores la importancia de respetar la fauna y preservar el medio ambiente. ¡Dispara a los globos, pero siempre protege a la naturaleza!</p>
-                </div>
-
+    <main class="container section">
+        <h2>Últimas Novedades</h2>
+        <div class="grid-2">
+            <div class="glass-card">
+                <span class="badge available">NUEVO</span>
+                <h3 style="margin: 1rem 0;">Lanzamiento Oficial 1.0</h3>
+                <p>¡El juego por fin está aquí! Disfruta de la versión base con los 5 globos iniciales y el sistema de ranking global. Descubre todos los detalles en nuestro Dev Blog.</p>
+                <br>
+                <a href="news.html" style="color: var(--color-sky-light); font-weight: bold;">Leer más →</a>
             </div>
-        </section>
-
-        <section id="privacy" class="section privacy-section">
-            <h2>Política de Privacidad</h2>
-            <div class="privacy-content">
-                <p><strong>Última actualización:</strong> Julio 2026</p>
-                
-                <p>En DreamSoftGroup estamos comprometidos con proteger la privacidad de los usuarios de "Balloon Hunter". Esta Política de Privacidad describe cómo manejamos la información dentro de nuestra aplicación.</p>
-
-                <h3>1. Recopilación de Datos Personales</h3>
-                <p>Balloon Hunter <strong>no recopila, no almacena y no comparte ningún tipo de dato personal identificable</strong> (como nombres, correos electrónicos, números de teléfono o ubicaciones precisas). Todo tu progreso y tus puntuaciones se guardan exclusivamente de manera local en tu dispositivo.</p>
-
-                <h3>2. Permisos Requeridos</h3>
-                <p>La aplicación solicita un acceso mínimo al sistema para garantizar su funcionamiento y modelo de negocio:</p>
-                <ul>
-                    <li><strong>Acceso a Internet (Red):</strong> Necesario única y exclusivamente para mostrar anuncios a través de la red publicitaria de Google AdMob.</li>
-                    <li><strong>Vibración (Haptics):</strong> Se utiliza para brindar retroalimentación física inmersiva al explotar globos o cometer errores.</li>
-                </ul>
-
-                <h3>3. Anuncios y Terceros</h3>
-                <p>Balloon Hunter utiliza Google AdMob como proveedor de anuncios. AdMob puede recopilar y utilizar datos anónimos (como identificadores de publicidad del dispositivo) de forma automática para proporcionar anuncios personalizados o medir su rendimiento, según las políticas de privacidad globales de Google.</p>
-
-                <h3>4. Protección Infantil</h3>
-                <p>Este juego está diseñado para ser seguro para todas las edades. No solicitamos ni recopilamos datos personales de niños menores de 13 años bajo ninguna circunstancia.</p>
-
-                <h3>5. Cambios en la Política</h3>
-                <p>Cualquier cambio futuro en nuestras prácticas de privacidad será actualizado en esta página.</p>
-                
-                <p>Si tienes alguna duda o inquietud, puedes contactarnos a través de los canales oficiales de DreamSoftGroup.</p>
+            
+            <div class="glass-card">
+                <span class="badge wip">TEASER</span>
+                <h3 style="margin: 1rem 0;">¿Algo se acerca...?</h3>
+                <p>Nuestros radares han detectado una perturbación en las nubes. Visita la sección de Actualizaciones para ver los primeros reportes.</p>
+                <br>
+                <a href="updates.html" style="color: var(--color-sky-light); font-weight: bold;">Investigar →</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
+            <div style="margin-top: 10px;">
+                <a href="policies.html">Políticas de Privacidad</a> | 
+                <a href="policies.html">Términos de Uso</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
