@@ -236,22 +236,22 @@ body {
 }
 
 .action-btn {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     gap: 15px;
-    min-width: 220px;
+    min-width: 200px;
     justify-content: center;
 }
-.action-btn i { font-size: 30px; color: #5cb85c; text-shadow: 1px 1px 0 #fff; }
+.action-btn i { font-size: 24px; color: #5cb85c; text-shadow: 1px 1px 0 #fff; }
 .secondary-btn i { color: #d9534f; }
 
 .form-container {
     background: var(--wood-gradient-light);
     padding: 20px 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 650px;
     text-align: center;
     z-index: 10;
 }
@@ -306,17 +306,15 @@ body {
 
 .hero-character {
     position: fixed;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 500px;
-    z-index: 1;
+    bottom: -30px;
+    left: 5%;
+    width: 350px;
+    z-index: 15;
     pointer-events: none;
 }
 .hero-character img {
     width: 100%;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
-    border-radius: 50%; /* Just in case the bg is not perfectly transparent */
+    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.6));
     mix-blend-mode: multiply; /* Helps blend solid white background if not transparent */
 }
 
