@@ -304,19 +304,7 @@ body {
     font-size: 18px;
 }
 
-.hero-character {
-    position: fixed;
-    bottom: -30px;
-    left: 5%;
-    width: 350px;
-    z-index: 15;
-    pointer-events: none;
-}
-.hero-character img {
-    width: 100%;
-    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.6));
-    mix-blend-mode: multiply; /* Helps blend solid white background if not transparent */
-}
+
 
 /* SECTION: BALLOONPEDIA & POLÍTICAS COMMON */
 .main-panel {
