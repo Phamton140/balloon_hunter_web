@@ -3,64 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balloon Hunter | Centro Oficial</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Balloon Hunter</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="clouds-bg"></div>
+    <div id="bg-container">
+        <img src="assets/bg_sky.jpg" alt="Background" class="bg-img">
+    </div>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="nav-brand">
-                <img src="logo.png" alt="Logo"> Balloon Hunter
-            </a>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="balloonpedia.html">Balloonpedia</a></li>
-            </ul>
+    <!-- NAVBAR -->
+    <nav class="navbar wood-panel">
+        <div class="logo">
+            <h1 class="logo-text">BALLOON <br><span>HUNTER</span></h1>
+            <div class="logo-icon-target"><i class="fa-solid fa-bullseye"></i></div>
+            <img src="assets/balloon_red.jpg" class="logo-balloon bl-red" alt="">
+            <img src="assets/balloon_yellow.jpg" class="logo-balloon bl-yellow" alt="">
+            <img src="assets/balloon_green.jpg" class="logo-balloon bl-green" alt="">
+            <img src="assets/balloon_blue.jpg" class="logo-balloon bl-blue" alt="">
         </div>
+        <ul class="nav-links">
+            <li><a href="#inicio" class="nav-btn active">Inicio</a></li>
+            <li><a href="#balloonpedia" class="nav-btn">Balloonpedia</a></li>
+            <li><a href="#politicas" class="nav-btn">Políticas</a></li>
+        </ul>
     </nav>
 
-    <header class="page-header hero" style="min-height: 80vh;">
-        <div class="container">
-            <img src="logo.png" alt="Balloon Hunter" class="logo floating" style="margin: 0 auto; width: 200px; border-radius: 22%;">
-            <h1 style="font-size: 4rem; margin-top: 1rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">Balloon Hunter</h1>
-            <p class="tagline" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">¡El centro oficial de la comunidad! Descubre todos los secretos, sigue el desarrollo y prepárate para cazar.</p>
-            <br>
-            <a href="https://play.google.com/store" class="btn" style="margin-right: 15px;">Descargar el Juego</a>
-            <a href="balloonpedia.html" class="btn btn-secondary">Explorar Balloonpedia</a>
-        </div>
-    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="app">
+        
+        <!-- SECCIÓN: INICIO -->
+        <section id="inicio" class="page-section active">
+            <div class="hero">
+                <div class="hero-logo-container">
+                    <img src="assets/balloon_yellow.jpg" class="hero-balloon b-yellow" alt="">
+                    <img src="assets/balloon_green.jpg" class="hero-balloon b-green" alt="">
+                    <img src="assets/balloon_red.jpg" class="hero-balloon b-red" alt="">
+                    <img src="assets/balloon_blue.jpg" class="hero-balloon b-blue" alt="">
+                    <h1 class="giant-logo-text">BALLOON<br><span>HUNTER</span></h1>
+                    <div class="hero-target"><i class="fa-solid fa-bullseye"></i></div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="#" class="wood-btn action-btn primary-btn"><i class="fa-solid fa-download"></i> DESCARGAR<br>JUEGO</a>
+                    <a href="#" class="wood-btn action-btn secondary-btn"><i class="fa-solid fa-bullseye"></i> SER<br>TESTER</a>
+                </div>
 
-    <main class="container section">
-        <h2>Últimas Novedades</h2>
-        <div class="grid-2">
-            <div class="glass-card">
-                <span class="badge available">NUEVO</span>
-                <h3 style="margin: 1rem 0;">Lanzamiento Oficial 1.0</h3>
-                <p>¡El juego por fin está aquí! Disfruta de la versión base con los 5 globos iniciales y el sistema de ranking global. Entra a la Balloonpedia para más detalles.</p>
+                <div class="form-container wood-panel">
+                    <h2 class="wood-text-title">FORMULARIO DE SUGERENCIAS</h2>
+                    <form action="https://formspree.io/f/genesismsf@gmail.com" method="POST">
+                        <div class="input-group">
+                            <div class="input-field">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="input-field">
+                                <label for="email">Nombre</label> <!-- Mantenido como en el mockup -->
+                                <input type="text" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="input-field full-width">
+                            <label for="sugerencia">Sugerencia</label>
+                            <textarea id="sugerencia" name="sugerencia" rows="3" required></textarea>
+                        </div>
+                        <p class="email-note">ENVIAR SUGERENCIAS AL CORREO: genesismsf@gmail.com</p>
+                        <button type="submit" class="wood-btn submit-btn">ENVIAR</button>
+                    </form>
+                </div>
             </div>
-            
-            <div class="glass-card">
-                <span class="badge wip">TEASER</span>
-                <h3 style="margin: 1rem 0;">¿Algo se acerca...?</h3>
-                <p>Nuestros radares han detectado una perturbación en las nubes. Visita la Balloonpedia para ver el último reporte de avistamiento.</p>
-                <br>
-                <a href="balloonpedia.html#teasers" style="color: var(--color-sky-light); font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Investigar →</a>
+            <div class="hero-character">
+                <img src="assets/hero.jpg" alt="Personaje Principal">
             </div>
-        </div>
+        </section>
+
+        <!-- SECCIÓN: BALLOONPEDIA -->
+        <section id="balloonpedia" class="page-section">
+            <div class="main-panel wood-panel">
+                <div class="panel-header">
+                    <h1 class="wood-text-title large">BALLOONPEDIA</h1>
+                </div>
+                
+                <div class="pedia-content">
+                    
+                    <div class="pedia-top-row">
+                        <!-- Comunes -->
+                        <div class="category-block flex-2">
+                            <div class="category-title-wrap"><h3 class="wood-badge">Comunes</h3></div>
+                            <div class="card-grid">
+                                <div class="wood-card">
+                                    <div class="card-img-container">
+                                        <img src="assets/balloon_yellow.jpg" alt="Globo Amarillo">
+                                        <div class="icon-overlay small-target"><i class="fa-solid fa-bullseye"></i></div>
+                                    </div>
+                                    <h4>1 pto</h4>
+                                    <p>Descripción entre un temroro balloon.</p>
+                                    <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                                </div>
+                                <div class="wood-card">
+                                    <div class="card-img-container">
+                                        <img src="assets/balloon_green.jpg" alt="Globo Verde">
+                                        <div class="icon-overlay small-target"><i class="fa-solid fa-bullseye"></i></div>
+                                    </div>
+                                    <h4>2 ptos</h4>
+                                    <p>Descripción entre un balloon y ponto.</p>
+                                    <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                                </div>
+                                <div class="wood-card">
+                                    <div class="card-img-container">
+                                        <img src="assets/balloon_red.jpg" alt="Globo Rojo">
+                                        <div class="icon-overlay small-target"><i class="fa-solid fa-bullseye"></i></div>
+                                    </div>
+                                    <h4>3 pts</h4>
+                                    <p>Descripción entre extsma de balloon.</p>
+                                    <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Raros -->
+                        <div class="category-block rarity-block flex-1">
+                            <div class="category-title-wrap"><h3 class="wood-badge">Raros</h3></div>
+                            <div class="wood-card dark-card">
+                                <div class="card-img-container dark-bg">
+                                    <i class="fa-solid fa-book icon-large"></i>
+                                    <div class="lock-circle"><i class="fa-solid fa-lock lock-icon"></i></div>
+                                </div>
+                                <h4>Guía Completa</h4>
+                                <p>Aún no disponible</p>
+                                <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Especiales -->
+                    <div class="category-block special-category">
+                        <div class="category-title-wrap"><h3 class="wood-badge">Especiales</h3></div>
+                        <div class="card-grid special-grid">
+                            <div class="wood-card">
+                                <div class="card-img-container frost-bg">
+                                    <img src="assets/balloon_blue.jpg" alt="Globo Hielo">
+                                    <div class="icon-overlay ice-effect"><i class="fa-regular fa-clock"></i></div>
+                                </div>
+                                <h4 class="blue-text shadow-text">Frío/Lento</h4>
+                                <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            </div>
+                            
+                            <div class="wood-card featured-card">
+                                <img src="assets/bird.jpg" alt="Ave Protegida" class="featured-img">
+                                <h4>AVE PROTEGIDA:<br>Símbolo del Medio Ambiente</h4>
+                                <p>La importante es importante e importante de vero ambiente.</p>
+                                <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            </div>
+
+                            <div class="wood-card">
+                                <div class="card-img-container dark-bg">
+                                    <img src="assets/balloon_black.jpg" alt="Globo Bomba">
+                                    <div class="icon-overlay bomb-effect"><i class="fa-solid fa-bomb"></i></div>
+                                </div>
+                                <h4 class="orange-text shadow-text">¡BOOM!<br>EXPLOSIÓN TOTAL</h4>
+                                <div class="card-bottom-icon"><i class="fa-solid fa-bullseye"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Próximos Lanzamientos -->
+                    <div class="category-block full-width-block">
+                        <div class="category-title-wrap"><h3 class="wood-badge">Próximos Lanzamientos</h3></div>
+                        <div class="card-grid future-grid">
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <i class="fa-solid fa-cube icon-placeholder"></i>
+                                </div>
+                                <h4>Globo Estelar</h4>
+                            </div>
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <i class="fa-solid fa-box icon-placeholder"></i>
+                                </div>
+                                <h4>Caja Misteriosa</h4>
+                            </div>
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <img src="assets/balloon_yellow.jpg" alt="Silueta" class="silhouette">
+                                </div>
+                                <h4>Globo de Velocidad</h4>
+                            </div>
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <img src="assets/balloon_yellow.jpg" alt="Silueta" class="silhouette">
+                                </div>
+                                <h4>Globo de Viento</h4>
+                            </div>
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <i class="fa-solid fa-box-open icon-placeholder"></i>
+                                </div>
+                                <h4>Caja de Bonificación</h4>
+                            </div>
+                            <div class="wood-card locked">
+                                <div class="card-img-container wood-texture">
+                                    <img src="assets/balloon_yellow.jpg" alt="Silueta" class="silhouette">
+                                </div>
+                                <h4>Globo de la Jungla</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: POLÍTICAS -->
+        <section id="politicas" class="page-section">
+            <div class="main-panel wood-panel">
+                <div class="panel-header">
+                    <h1 class="wood-text-title large">POLÍTICAS Y PERMISOS</h1>
+                </div>
+                
+                <div class="policies-grid">
+                    <div class="wood-card text-card">
+                        <div class="card-header"><h3 class="card-title">POLÍTICA DE PRIVACIDAD</h3></div>
+                        <div class="card-content parchment">
+                            <p><strong>• Recopilación de Datos</strong><br>
+                            Recopilación de datos, datos, recopiterato en la información tu contento, comprenuss actualización de datos artos y análiticas de datos.</p>
+                            
+                            <p><strong>• Uso de Información</strong><br>
+                            La formación eos entre m uso de batos ws actualizante balloon, por enforenamente analiticas a su uso de información y sie información.</p>
+
+                            <p><strong>• Terceros</strong><br>
+                            La Terceros de balloon concerta, entre, uso de información esrionas y contrutados de nolintas de juego.</p>
+                        </div>
+                    </div>
+
+                    <div class="wood-card text-card">
+                        <div class="card-header"><h3 class="card-title">TÉRMINOS DE SERVICIO</h3></div>
+                        <div class="card-content parchment">
+                            <p><strong>• Uso del Juego</strong><br>
+                            Uso del juego, en uso del balloon y realizarar determina extssras del juego or y comproable.</p>
+                            
+                            <p><strong>• Cuentas de Usuario</strong><br>
+                            Arcuentas de usuario umtre cuentas poda tatu descripado comte al juego.</p>
+
+                            <p><strong>• Propiedad Intelectual</strong><br>
+                            Es popiedad Intelectual en una propiedad x odenza completica balloon y eovopiedad de juego.</p>
+
+                            <p><strong>• Parizada Cantal</strong><br>
+                            Propiedad sita de juego prercadmt uleno de usurri, es que es infra de usaro, mediee annnercado a su ruquión de contactamiento.</p>
+                        </div>
+                    </div>
+
+                    <div class="wood-card text-card">
+                        <div class="card-header icon-title">
+                            <div class="play-icon">▶</div>
+                            <h3 class="card-title">DEFINICIÓN DE PERMISOS DE GOOGLE PLAY</h3>
+                        </div>
+                        <div class="card-content parchment permissions">
+                            <div class="permission-item wood-inner-panel">
+                                <div class="perm-icon blue-icon"><i class="fa-solid fa-wifi"></i></div>
+                                <div>
+                                    <h4>ACCESO A INTERNET</h4>
+                                    <p>Para neta para actualizadones del leaderbord y análiticas.</p>
+                                </div>
+                            </div>
+                            <div class="permission-item wood-inner-panel">
+                                <div class="perm-icon grey-icon"><i class="fa-solid fa-sd-card"></i></div>
+                                <div>
+                                    <h4>ALMACENAMIENTO EXTERNO</h4>
+                                    <p>Para almacenamiento to aharra de cache opcional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wood-card text-card env-card">
+                        <div class="card-header icon-title">
+                            <div class="play-icon green-icon">▶</div>
+                            <h3 class="card-title">RESPONSABILIDAD AMBIENTAL</h3>
+                        </div>
+                        <div class="card-content parchment">
+                            <p>The Protected Bird" es un protegido de "Enapen Bs.3) prosento y del juego de la ambiental. We entenita com:un concerenimiento y paso trovtumero de juego oon compromado en la nontona bemonante inténtioa del fuyndo del Protected Bird que estás compreme. El Balloon coun compromiso a la responsabily tmientta de tu juego y reeventala la ponabilidad ambiental.</p>
+                        </div>
+                        <img src="assets/bird.jpg" alt="Bird" class="env-bird">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 DreamSoftGroup. Todos los derechos reservados.</p>
-            <div style="margin-top: 10px;">
-                <a href="policies.html" style="color: #ccc; text-decoration: underline; font-size: 0.85rem;">Política de Privacidad</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
