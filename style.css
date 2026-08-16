@@ -95,8 +95,9 @@ body {
 }
 
 .nav-logo-img {
-    height: 35px; /* Reduced from 40px */
+    height: 35px;
     width: auto;
+    mix-blend-mode: multiply;
     filter: drop-shadow(0 4px 5px rgba(0,0,0,0.5));
 }
 
@@ -160,9 +161,10 @@ body {
 
 .hero-logo-img {
     width: 100%;
-    max-width: 280px; /* Reduced from 350px to save vertical space */
+    max-width: 380px;
     height: auto;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
 }
 
 .action-buttons {
